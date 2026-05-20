@@ -3,11 +3,12 @@
   cursor: default;
 }
 
-.suporte {
-  position: absolute;
-  margin-top: 120rem;
-  margin-left: 95rem;
-  font-size: 1.2rem;
+.suporte,
+.pedidos {
+  position: static;
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
   font-family: "IM Fell English", serif;
   font-style: italic;
   letter-spacing: 0.1em;
@@ -15,15 +16,83 @@
 }
 
 .pedidos {
-  position: absolute;
-  margin-top: 40rem;
-  margin-left: 95rem;
-  font-size: 1.2rem;
-  font-family: "IM Fell English", serif;
-  font-style: italic;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
   font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  header {
+    padding: 2.5rem 1.2rem 1.8rem;
+    gap: 0.6rem;
+  }
+
+  .gallery-section {
+    padding: 0 0.75rem 3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .site-title {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+  }
+
+  .social-buttons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-social {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.76rem;
+  }
+
+  .section-divider {
+    padding: 1.8rem 0.75rem 1.2rem;
+    gap: 0.8rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+
+  .art-card-info {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .art-card-title {
+    font-size: 0.9rem;
+  }
+
+  .art-card-meta {
+    font-size: 0.68rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-social {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 :root {
@@ -470,39 +539,6 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  header {
-    padding: 2.5rem 1.2rem 1.8rem;
-  }
-  .gallery-section {
-    padding: 0 1rem 3rem;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-  .site-title {
-    font-size: clamp(2rem, 10vw, 2.8rem);
-  }
-  .social-buttons {
-    gap: 0.7rem;
-  }
-  .btn-social {
-    padding: 0.55rem 1rem;
-    font-size: 0.78rem;
-  }
-  .section-divider {
-    padding: 1.8rem 1rem 1.2rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
   }
 }
 
